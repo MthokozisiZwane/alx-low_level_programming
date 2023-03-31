@@ -1,8 +1,8 @@
 #include<stdio.h>
-/** a program to print words
- *with
- *no
- *inputs
+/**
+ * main - starting point
+ *
+ * return always 0(successful)
  */
 int main(void)
 {	puts("\"Programming is like building a multilingual puzzle");
