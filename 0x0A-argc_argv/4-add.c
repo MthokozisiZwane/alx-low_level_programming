@@ -3,21 +3,21 @@
 #include <ctype.h>
 #include <string.h>
 /**
- * check_num - check
- * @string: array strings
+ * check_num - check - str for digits
+ * @str: array of strings
  *
  * Return: Always 0 (Success)
  */
-int check_num(char *string)
+int check_num(char *str)
 {
-	/*Declaration of variables*/
+	/*Declaring variables*/
 	unsigned int count;
 
 	count = 0;
-	while (count < strlen(string)) /*counts string*/
+	while (count < strlen(str)) /*count string*/
 
 	{
-		if (!isdigit(string[count])) /*check if strings has digit*/
+		if (!isdigit(str[count])) /*check if str has digit*/
 		{
 			return (0);
 		}
@@ -28,18 +28,18 @@ int check_num(char *string)
 }
 
 /**
-* main - add +ve numbers
-* @argc: Counts number of arguments
-* @argv: array of Arguments 
-*
-* Return: Always 0 (Success)
-*/
+ * main - adds +ve numbers
+ * @argc: Counts number of arguments
+ * @argv:array of Arguments
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(int argc, char *argv[])
 
 {
 
-	/*Declaring of variables*/
+	/*Declaring variables*/
 	int count;
 	int str_to_int;
 	int sum = 0;
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 			sum += str_to_int;
 		}
 
-		/*Condition if one of the number contains other characters that are not digits*/
+		/*Condition for invalid characters*/
 		else
 		{
 			printf("Error\n");
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 		count++;
 	}
 
-	printf("%d\n", sum); /*prints the sum*/
+	printf("%d\n", sum); /*print sum*/
 
 	return (0);
 }
