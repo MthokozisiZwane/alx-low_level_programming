@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	i = atoi(argv[1]);
 	result = 0;
 
-	if( i < 0)
+	if (i < 0)
 	{
 		printf("0\n");
 		return (0);
