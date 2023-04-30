@@ -1,1 +1,1 @@
-reame for C hello world
+Git repository for C programming projects.
