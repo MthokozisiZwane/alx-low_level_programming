@@ -20,9 +20,10 @@ int main(void)
 {
  if(*s != 0){
    printf("%c",*s);
+   _putchar(*s);
 
   _puts_recursion(s++);
 
-   } else _puts_recursion('\n');
+   } else _putchar('\n');
 
 }
