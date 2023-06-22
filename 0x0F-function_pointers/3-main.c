@@ -5,7 +5,6 @@
 /**
  * main - Prints the results of our operations.
  * @argc: The number of arguments supplied to the program.
-
  * @argv: An array of pointers.
  *
  * Return: Always 0.
