@@ -4,7 +4,8 @@
 #include "3-calc.h"
 /**
  * main - Prints the results of our operations.
- * @argc: counts the number of arguments 
+ * @argc: The number of arguments supplied to the program.
+
  * @argv: An array of pointers.
  *
  * Return: Always 0.
