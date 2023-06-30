@@ -1,41 +1,45 @@
 #include <stdlib.h>
 #include "main.h"
-#include <string.h>
 
 /**
  * *string_nconcat - concatenates n bytes of a string to another string
- * @s1: string to concatenate on
- * @s2: string two to concatenate from
+ * @s1: string to append to
+ * @s2: string to concatenate from
  * @n: number of bytes from s2 to concatenate to s1
  *
  * Return: pointer to the resulting string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *string;
-	unsigned int i = 0, j = 0;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (n < strlen(s2))
-		string = malloc(sizeof(char) * (strlen(s1) + n + 1));
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
 	else
-		string = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	if (string != NULL)
+	if (!s)
 		return (NULL);
 
-	while (i < strlen(s1))
+	while (i < len1)
 	{
-		string[i] = s1[i];
+		s[i] = s1[i];
 		i++;
 	}
 
-	while (n < strlen(s2) && i < (strlen(s1) + n))
-		string[i++] = s2[j++];
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
 
-	while (n >= strlen(s2) && i < (strlen(s1) + strlen(s2)))
-	string[i++] = s2[j++];
-	string[i] = '\0';
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
 
-	return (string);
+	s[i] = '\0';
+
+	return (s);
 }
-
