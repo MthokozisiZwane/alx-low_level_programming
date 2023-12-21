@@ -10,7 +10,7 @@
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i,low, high;
+	size_t i, low, high;
 
 	if (array == NULL || size == 0)
 		return (-1);
@@ -35,7 +35,7 @@ int exponential_search(int *array, size_t size, int value)
 }
 
 /**
- * binary_search - Searches for value in a sorted array using Binary algorithm
+ * bina_search - Searches for value in a sorted array using Binary algorithm
  * @array: Pointer to the first element of the array
  * @low: The lower bound for binary search
  * @high: The higher bound for binary search
