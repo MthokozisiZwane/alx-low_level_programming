@@ -33,7 +33,7 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 
 	mid = low + (high - low) / 2;
 
-	printf("Searching in array: ");
+	/*printf("Searching in array: ");*/
 	print_array_segment(array, low, high);
 
 	if (array[mid] == value)
@@ -59,6 +59,8 @@ int advanced_binary_recursive(int *array, size_t low, size_t high, int value)
 void print_array_segment(int *array, size_t low, size_t high)
 {
 	size_t j;
+
+	printf("Searching in array: ");
 
 	for (j = low; j <= high; ++j)
 	{
